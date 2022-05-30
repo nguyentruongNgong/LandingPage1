@@ -1,0 +1,169 @@
+.footer {
+  &-top {
+    padding: 7.5rem 0 7rem;
+    @include flexbox(stretch, space-between);
+  }
+  &-colunm {
+    width: calc(25% - 25px);
+    &:first-child {
+      width: calc(40% - 25px);
+    }
+    &:nth-child(2) {
+      width: calc(40% - 25px);
+    }
+  }
+  &-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    height: 4rem;
+    margin-bottom: 2rem;
+    &--logo {
+      text-transform: none;
+      font-size: 4.6rem;
+      font-weight: bold;
+      color: $text-color;
+    }
+  }
+  &-desc {
+    font-size: 1.5rem;
+    font-family: $secondary-font;
+    line-height: 1.6;
+    font-weight: 300;
+    color: $text-color;
+    margin-bottom: 4.5rem;
+    margin-top: 2rem;
+  }
+  &-follwer {
+    strong {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  &-social {
+    span {
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      font-family: $secondary-font;
+      color: $text-color;
+    }
+    @include flexbox(center);
+    margin-bottom: 3.5rem;
+    &-icon {
+      color: $third-color;
+      margin-left: 1.5rem;
+      font-size: 2.5rem;
+    }
+  }
+  &-form {
+    width: 100%;
+    max-width: 38rem;
+    @include flexbox;
+  }
+  &-form-intput {
+    padding: 1.5rem;
+    border: 1px solid #e5e5e5;
+    @include bg(white);
+    border-right: 0;
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    font-style: italic;
+    width: 100%;
+  }
+  &-form-button {
+    color: white;
+    text-transform: uppercase;
+    padding: 1.5rem 3.5rem;
+    background-color: $third-color;
+    border: 0;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  &-blog {
+    @include flexbox(center);
+    margin-bottom: 3.5rem;
+    &:last-child {
+      margin-bottom: 0;
+      margin-top: auto;
+    }
+  }
+  &-blog-image {
+    @include size(12rem, 8rem);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  &-blog-info {
+    padding-left: 2rem;
+  }
+  &-blog-title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+  &-blog-date {
+    font-size: 1.5rem;
+    font-family: $secondary-font;
+    font-style: italic;
+    line-height: 1.6;
+    font-weight: 300;
+    color: $text-color;
+    margin-bottom: 4.5rem;
+    margin-top: 2rem;
+  }
+  &-images {
+    @include flexbox(stretch, flex-start, row, flex, wrap);
+    margin-left: -2px;
+    &-more {
+      font-family: $secondary-font;
+      font-size: 1.5rem;
+      font-style: italic;
+      width: 100%;
+      color: $text-color;
+      margin-top: 1.5rem;
+      display: inline-block;
+    }
+  }
+  &-image {
+    margin-left: 2px;
+    width: calc(33.33% - 2px);
+    margin-bottom: 2px;
+    height: 0;
+    padding-bottom: 33.33%;
+    position: relative;
+    img {
+      @include size(100%);
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &-bottom {
+    padding: 2.5rem 0;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    span {
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+  @include maxWidth(1023px) {
+    &-top {
+      display: block;
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+    }
+    &-colunm:not(:nth-child(99)) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    &-colunm:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
